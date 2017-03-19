@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JsonPrinter</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <script src="JsonPather.js"></script>
+
+</head>
+<body>
+
+<div id='playground'></div>
+<br>
+
+
+<script>
+    var sampleJsonString = "{\"key1_simple\":\"val1\",\"key2_obj\":{\"a\":\"aa\",\"b\":\"bb\"},\"key3_objArray\":[{\"obj1\":{\"a1\":\"aa1\",\"b1\":\"bb1\"},\"obj2\":{\"a2\":\"aa2\",\"b2\":\"bb2\"}}]}";
+    JsonPather.setHeight(300);
+    JsonPather.build(sampleJsonString, "playground");
+
+    var logPath = function () {
+        var res = JsonPather.calculate();
+        for (var obj in res) {
+            console.log('-----');
+            console.log('Path:' + res[obj].path);
+            console.log('Key:' + res[obj].key);
+            console.log('Value:');
+            console.log(res[obj].value);
+        }
+    }
+</script>
+<input type="button" value="Calculate path" onclick="logPath()">
+
+</body>
+</html>
