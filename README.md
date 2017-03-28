@@ -1,7 +1,11 @@
 # JsonPather
-Displays and calculates the JSON path (using vanilla JS)
+Display and selectively calculate JSON paths
+
+(Using vanilla JS - no dependencies)
 
 ![](https://zippy.gfycat.com/AstonishingJaggedHuemul.gif)
+
+For a more precise example, check the HTML file in the repo.
 
 ### Usage:
 ```
@@ -10,9 +14,9 @@ Displays and calculates the JSON path (using vanilla JS)
 - JsonPather.setLineColors("#d9e9fa")
 - JsonPather.setTextColors(keyColor, valueColor)
 - JsonPather.setStartingLine(0)
-- JsonPather.build(sampleJsonString, "myDiv")*
+- JsonPather.build(sampleJsonString, "myDiv")
 ```
-(All but the last are optional)
+
 
 ### Functions:
 ```
